@@ -1,0 +1,17 @@
+import { ReactNode } from "react";
+import Logo from "@/assets/logo.svg";
+
+type DashboardLayoutProps = {
+  children: ReactNode;
+};
+
+export default function DashboardLayout({ children }: DashboardLayoutProps) {
+  return (
+    <div className="w-full h-screen overflow-hidden grid grid-cols-[300px,1fer]">
+      <aside className="w-full h-full flex flex-col items-center border-r border-muted">
+        <div className="w-full p-6 border-b border-muted"></div>
+      </aside>
+      <main>{children}</main>
+    </div>
+  );
+}
